@@ -7,7 +7,7 @@ public class WordRead {
         try { in = new Scanner(new FileReader(fname)); } 
         catch(IOException e) { e.printStackTrace(); System.exit(1); }
         while(in.hasNext()) {
-            list = ListStuff.addToFront(in.next(), list);
+            list = ListStuff.addToBack(in.next(), list);
         }
         return ListStuff.listToArray(list);
     }

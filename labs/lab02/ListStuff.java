@@ -5,6 +5,15 @@ public class ListStuff {
         Nnew.next = Nold;
         return Nnew;
     }
+    public static StringNode addToBack(String s, StringNode Nold) {
+        if(Nold == null) {
+            StringNode Nnew = new StringNode();
+            Nnew.data = s;
+            return Nnew;
+        }
+        Nold.next = addToBack(s, Nold.next); 
+        return Nold;
+    }
     public static int listLen(StringNode N) {
         if(N == null) {
             return 0;
