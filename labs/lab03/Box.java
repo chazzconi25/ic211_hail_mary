@@ -24,7 +24,7 @@ public class Box {
     // unit square (see notes); returns null if p is not inside the bounding box.
     public Point mapIntoUnitSquare(Point p) {
         if (p.getX() > max.getX() || p.getX() < min.getX() ||
-        p.getY() < min.getY() || p.getY() < min.getY()) {
+        p.getY() > max.getY() || p.getY() < min.getY()) {
             return null;
         }
         return new Point((p.getX()-min.getX())/this.getWidth(), (p.getY()-min.getY())/this.getHeight());
